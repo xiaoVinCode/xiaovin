@@ -75,7 +75,7 @@ TaildirSource最大的优点在于兼容多种格式和编码的日志文件，�
 
 该例子监控 `/var/log` 目录下所有以 `.log` 后缀的文件，并将其发送到 channel。
 
-```
+```properties
 复制代码agent.sources.taildir-source.channels = channel-1
 agent.sources.taildir-source.type = org.apache.flume.source.taildir.TaildirSource
 agent.sources.taildir-source.positionFile = /var/tmp/taildir_positions.json
@@ -100,7 +100,7 @@ agent.sources.taildir-source.filegroups.f1 = /var/log
 
 #### 五、实操
 
-```
+```properties
 agent1.sources.tail_source.type = TAILDIR
 agent1.sources.tail_source.positionFile = ${exec_log_path}/position.json
 agent1.sources.tail_source.filegroups = f1 f2

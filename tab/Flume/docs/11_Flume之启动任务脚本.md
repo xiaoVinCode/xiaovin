@@ -29,7 +29,7 @@ hdfsFileSuffix=1
 
 flume_common.sh
 
-```
+```bash
 #!/bin/bash
 source /etc/profile
 
@@ -114,7 +114,7 @@ esac
 
 flume_app_info_to_hdfs.sh
 
-```
+```bash
 #!/bin/bash
 source /etc/profile
 

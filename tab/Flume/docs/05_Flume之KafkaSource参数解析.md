@@ -67,7 +67,7 @@ KafkaSource是Flume中的Source类型之一，可以实现数据从Kafka到Flume
 
 #### 五、配置示例
 
-```
+```properties
 # Name the source
 agent1.sources.kafka-source.type = org.apache.flume.source.kafka.KafkaSource
 
@@ -130,7 +130,7 @@ B：当只启动一个Flume实例消费一个包含5个partition的Kafka topic�
 
 #### 七、实操
 
-```
+```properties
 agent1.sources.kafka_source.type = org.apache.flume.source.kafka.KafkaSource
 agent1.sources.kafka_source.batchSize = 50000
 agent1.sources.kafka_source.batchDurationMillis = 2000

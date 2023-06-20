@@ -41,7 +41,7 @@
 
 ## 二、简单模板
 
-```
+```properties
 agent_name.sources = source_name
 agent_name.channels = channel_name
 agent_name.sinks = sink_name
@@ -135,13 +135,13 @@ agent_name.sinks.sink_name.channel = channel_name
 
 - 将Hadoop集群的core-site.xml和hdfs-site.xml文件复制到Flume服务器上的某个目录（/path/to/hadoop/conf）中
 
-  - ```
+  - ```bash
     bin/flume-ng agent --conf-file conf/flume.conf --name a1 -Dhadoop.conf.dir=/path/to/hadoop/conf
     ```
 
 - 在启动Flume时，也可以使用"-conf"参数指定core-site.xml和hdfs-site.xml文件的路径，如下所示：
 
-  - ```
+  - ```bash
     bin/flume-ng agent --conf-file conf/flume.conf --name a1 -conf /path/to/hadoop/conf/core-site.xml -conf /path/to/hadoop/conf/hdfs-site.xml
     ```
 
@@ -155,7 +155,7 @@ agent_name.sinks.sink_name.channel = channel_name
 
 - 需要注意的是，kevin用户需要在HDFS上拥有写入目标目录的权限，否则会出现写入失败等问题。因此，在实际使用中，需要对该用户进行独立管理，并按照实际需求进行授权
 
-```
+```bash
 ./bin/flume-ng agent -n ${agentName} -c ${flumeClient}/conf/ -f ${jobLocation} -Duser.name=kevin
 ```
 

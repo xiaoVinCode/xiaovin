@@ -67,20 +67,20 @@ Event是Flume数据流传输过程中的一个基本单位，由一个可选的h
 - [地址](https://links.jianshu.com/go?to=http%3A%2F%2Farchive.apache.org%2Fdist%2Fflume%2F)：[http://archive.apache.org/dist/flume/](https://links.jianshu.com/go?to=http%3A%2F%2Farchive.apache.org%2Fdist%2Fflume%2F)
 - 解压
 
-```shell
+```bash
 [kevin@hadoop112 software]$ tar -zxvf apache-flume-1.9.0-bin.tar.gz -C /opt/module/
 ```
 
 - 改名
 
-```ruby
+```bash
 [kevin@hadoop112 software]$ cd /opt/module/
 [kevin@hadoop112 module]$ mv apache-flume-1.9.0-bin flume-1.9.0
 ```
 
 - 配置
 
-```java
+```bash
 [kevin@hadoop112 module]$ cd flume-1.9.0/conf/
 [kevin@hadoop112 conf]$ mv flume-env.sh.template flume-env.sh
 [kevin@hadoop112 conf]$ vim flume-env.sh
@@ -94,19 +94,19 @@ export JAVA_OPTS="-Xms1024m -Xmx3072m -Dcom.sun.management.jmxremote"
 
 - 安装 netcat 工具
 
-```ruby
+```bash
 [kevin@hadoop112 flume-1.9.0]$ sudo yum install -y nc
 ```
 
 - 判断 44444 端口是否被占用
 
-```shell
+```bash
  [kevin@hadoop112 flume-1.9.0]$ sudo netstat -tunlp | grep 44444
 ```
 
 - 创建 Flume Agent 配置文件 flume-netcat-logger.conf
 
-```shell
+```bash
 [kevin@hadoop112 flume-1.9.0]$ mkdir jobs
 [kevin@hadoop112 flume-1.9.0]$ cd jobs/
 [kevin@hadoop112 jobs]$ touch flume-netcat-logger.conf
@@ -115,7 +115,7 @@ export JAVA_OPTS="-Xms1024m -Xmx3072m -Dcom.sun.management.jmxremote"
 
 - 在 flume-netcat-logger.conf 文件中添加如下内容。
 
-```sh
+```properties
 # Name the components on this agent
 a1.sources = r1
 a1.sinks = k1
@@ -141,7 +141,7 @@ a1.sinks.k1.channel = c1
 
 - 先开启 flume 监听端口
 
-```shell
+```bash
 [kevin@hadoop112 flume-1.9.0]$ bin/flume-ng agent -c conf/ -n a1 -f jobs/flume-netcat-logger.conf -Dflume.root.logger=INFO,console
 ```
 

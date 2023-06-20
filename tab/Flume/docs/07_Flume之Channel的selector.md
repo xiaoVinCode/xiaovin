@@ -17,7 +17,7 @@
 
 配置范例：
 
-```
+```properties
 a1.sources = r1
 a1.channels = c1 c2 c3
 a1.sources.r1.selector.type = replicating
@@ -29,7 +29,7 @@ a1.sources.r1.selector.optional = c3
 
 例子：replicating
 
-```
+```properties
 agent1.sources.s1.type = TAILDIR
 agent1.sources.s1.positionFile = ${exec_log_path}/position.json
 agent1.sources.s1.filegroups = fg_1 fg_2
@@ -56,7 +56,7 @@ Agent：多路模式一般有两种实现方式，一种是用来复制，另一
 
 配置范例：
 
-```
+```properties
 a1.sources = r1
 a1.channels = c1 c2 c3 c4
 a1.sources.r1.selector.type = multiplexing
@@ -68,7 +68,7 @@ a1.sources.r1.selector.default = c4          #默认使用c4这个channel
 
 例子：multiplexing
 
-```
+```properties
 agent1.sources.s1.type = avro
 agent1.sources.s1.bind = 0.0.0.0
 agent1.sources.s1.port = 1234

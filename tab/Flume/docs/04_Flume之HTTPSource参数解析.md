@@ -56,7 +56,7 @@ Flume 1.9.0 版本的 HTTPSource 是一种数据源类型，可以用于接收�
 
 如果您的服务器有多个 IP 地址，建议使用 `bind` 参数指定具体的 IP 地址，以避免绑定错误的 IP 地址导致接收不到数据。
 
-```
+```properties
 agent.sources.http-source.bind = 192.168.1.100
 ```
 
@@ -64,7 +64,7 @@ agent.sources.http-source.bind = 192.168.1.100
 
 开启 Keep-Alive 功能可以减少 TCP 连接的创建和销毁次数，提升性能。
 
-```
+```properties
 agent.sources.http-source.keep-alive = true
 ```
 
@@ -72,7 +72,7 @@ agent.sources.http-source.keep-alive = true
 
 如果需要对传输数据进行加密保护，可以开启 SSL 加密传输功能。需要注意的是，在开启 SSL 加密传输时，需要配置相关的证书信息。
 
-```
+```properties
 agent.sources.http-source.sslEnabled = true
 agent.sources.http-source.keyStorePath = /path/to/keystore
 agent.sources.http-source.keyStorePassword = password
@@ -84,7 +84,7 @@ agent.sources.http-source.trustStorePassword = password
 
 增加异步事件处理线程数可以提高并发性能。
 
-```
+```properties
 agent.sources.http-source.threads = 32
 ```
 
@@ -92,7 +92,7 @@ agent.sources.http-source.threads = 32
 
 合理的批量发送大小和间隔时间可以有效减少网络 IO 操作的次数。
 
-```
+```properties
 agent.sources.http-source.maxBatchSize = 500
 agent.sources.http-source.maxBatchDurationMillis = 1000
 ```
@@ -101,7 +101,7 @@ agent.sources.http-source.maxBatchDurationMillis = 1000
 
 在处理大流量数据时，可能会出现请求超时的情况。可以适当增加请求超时时间，以避免数据丢失。
 
-```
+```properties
 agent.sources.http-source.requestTimeout = 5000
 ```
 
@@ -109,7 +109,7 @@ agent.sources.http-source.requestTimeout = 5000
 
 开启 GZIP 压缩传输可以减少网络传输的数据量，提高传输效率。
 
-```
+```properties
 agent.sources.http-source.enableCompression = true
 agent.sources.http-source.compressionLevel = 5
 ```

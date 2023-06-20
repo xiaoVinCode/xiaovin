@@ -31,7 +31,7 @@ Channel被设计为Event中转临时缓冲区，存储Source收集并且没有�
 
 channels.capacity >= channels.transactionCapacity >= source.batchSize
 
-```
+```properties
 官方channels配置示例
 a1.channels = c1
 a1.channels.c1.type = memory
@@ -57,7 +57,7 @@ agent.channels.c1.transactionCapacity=520000
 
 #### ② 简单模板
 
-```
+```properties
 # 命名 Agent 上的组件
 agent_name.sources = source_name
 agent_name.channels = channel_name
@@ -112,7 +112,7 @@ agent_name.sinks.sink_name.channel = channel_name
 
 #### ② 简单模板
 
-```
+```properties
 # 命名 Agent 上的组件
 agent_name.sources = source_name
 agent_name.channels = channel_name
@@ -172,7 +172,7 @@ kafka相关参数的默认值在org.apache.kafka.clients.CommonClientConfigs包�
 Kafka的通用配置参数在配置文件中都以“kafka.”为前缀，针对Producer或者Consumer的相关配置以“kafka.producer. ”或者“kafka.consumer. ”为前缀，
 源码 KafkaChannelConfiguration 中相关默认配置参数定义如下：
 
-```
+```properties
 KAFKA_PREFIX = "kafka.";
 KAFKA_CONSUMER_PREFIX = KAFKA_PREFIX + "consumer.";
 KAFKA_PRODUCER_PREFIX = KAFKA_PREFIX + "producer.";
@@ -212,7 +212,7 @@ DEFAULT_READ_SMALLEST_OFFSET = false;
 
 #### ② 简单模板
 
-```
+```properties
 # 命名 Agent 上的组件
 agent_name.channels = channel_name
 agent_name.sinks = sink_name

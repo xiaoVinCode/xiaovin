@@ -16,7 +16,7 @@ LoadBalancingSinkProcessor:  load balancing sink processor给多个sinks之间�
 
 例子：
 
-```
+```properties
 a_stat_info.sinkgroups.sg_stat_info.sinks = k_stat_info_1 k_stat_info_2
 a_stat_info.sinkgroups.sg_stat_info.processor.type = load_balance
 a_stat_info.sinkgroups.sg_stat_info.processor.backoff = true

@@ -36,7 +36,7 @@ Source用于对接各种数据源，将收集到的事件发送到临时存储Ch
 
 #### ② 简单模板
 
-```
+```properties
 # 命名 Agent 上的组件
 agent_name.sources = source_name
 agent_name.channels = channel_name
@@ -83,7 +83,7 @@ agent_name.sinks.sink_name.channel = channel_name
 
 #### ② 简单模板
 
-```
+```properties
 # 命名 Agent 上的组件
 agent_name.sources = source_name
 agent_name.channels = channel_name
@@ -127,7 +127,7 @@ agent_name.sinks.sink_name.channel = channel_name
 
 #### ② 简单模板
 
-```
+```properties
 # 命名 Agent 上的组件
 agent_name.sources = source_name
 agent_name.channels = channel_name
@@ -171,7 +171,7 @@ agent_name.sinks.sink_name.channel = channel_name
 
 #### ② 简单模板
 
-```
+```properties
 # 命名 Agent 上的组件
 agent_name.sources = source_name
 agent_name.channels = channel_name
@@ -223,7 +223,7 @@ agent_name.sinks.sink_name.channel = channel_name
 
 #### ② 简单模板
 
-```
+```properties
 # 命名 Agent 上的组件
 agent_name.sources = source_name
 agent_name.channels = channel_name

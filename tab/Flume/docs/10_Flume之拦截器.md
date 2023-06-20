@@ -182,7 +182,7 @@ public class TimestampInterceptor implements Interceptor {
 
 4. 使用
 
-```
+```properties
 # 命名 Agent 上的组件
 a_app_info_to_hdfs.sources = s_app_info
 a_app_info_to_hdfs.channels = c_app_info

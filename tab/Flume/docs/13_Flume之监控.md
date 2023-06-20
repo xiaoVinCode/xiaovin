@@ -92,7 +92,7 @@ bin/flume-ng agent --conf conf --conf-file conf/flume_conf.properties --name a1 
 
 这种监控方式需要先安装ganglia然后启动ganglia，然后再启动flume的时候加上监控配置，例如：
 
-```plain
+```bash
 bin/flume-ng agent --conf conf --conf-file conf/producer.properties --name a1 -Dflume.monitoring.type=ganglia -Dflume.monitoring.hosts=ip:port
 ```
 
