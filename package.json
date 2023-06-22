@@ -2,7 +2,7 @@
   "name": "xiaovin",
   "version": "1.0.0",
   "description": "A project of vuepress-theme-hope",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "type": "module",
   "scripts": {
     "docs:build": "vuepress build docs",
