@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar/index.js";
 
 export default hopeTheme({
-    hostname: "https://xiaovin.gitee.io",
+    hostname: "https://xiaoVinCode.github.io/xiaovin",
 
     iconAssets: "iconfont",
     // iconAssets: "fontawesome-with-brands",
@@ -15,7 +15,7 @@ export default hopeTheme({
 
     logo: "/logo.svg",
 
-    repo: "https://gitee.com/xiaoVin/xiaovin",
+    repo: "https://github.com/xiaoVinCode/xiaovin",
     // repo: "vuepress-theme-hope/vuepress-theme-hope",
     docsDir: "docs",
     docsBranch: "main",
