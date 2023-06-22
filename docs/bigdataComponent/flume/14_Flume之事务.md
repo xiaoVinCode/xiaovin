@@ -1,3 +1,29 @@
+---
+# 这是文章的标题
+title: 14_事务
+# 这是页面的图标
+# icon: fab fa-markdown
+# 这是侧边栏的顺序
+order: 1
+# 设置作者
+author: xiaovin
+# 设置写作时间
+date: 2023-04-01
+# 是否原创
+# isOriginal: true
+# 一个页面可以有多个分类
+category:
+- 数据集成
+# 一个页面可以有多个标签
+# tag:
+#   - Flume
+# 此页面会在文章列表置顶
+sticky: true
+# 此页面会出现在文章收藏中
+star: true
+---
+
+
 Flume使用两个独立的事务分别负责从soucrce到channel，以及从channel到sink的event传递。一旦事务中所有的event全部传递到channel且提交成功，那么source就将该文件标记为完成。同理，事务以类似的方式处理从channel到sink的传递过程，如果因为某种原因使得event无法记录，那么事务将会回滚，且所有的event都会保持到channel中，等待重新传递。 
 
 Flume的事务机制保证了source产生的每个event都会传送到sink中（如果失败会无限重试），flume采用的是At-least-once的提交方式，这样就造成每个source产生的event至少到达sink一次，这种方式保证了数据的可靠性，但数据可能重复。

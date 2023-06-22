@@ -1,6 +1,6 @@
 ---
 # 这是文章的标题
-title: 02_Flume之各种Source的介绍及参数解析
+title: 02_各种Source的介绍及参数解析
 # 这是页面的图标
 # icon: fab fa-markdown
 # 这是侧边栏的顺序

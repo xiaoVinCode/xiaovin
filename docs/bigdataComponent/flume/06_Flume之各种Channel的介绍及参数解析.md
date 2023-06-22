@@ -1,3 +1,28 @@
+---
+# 这是文章的标题
+title: 06_各种Channel的介绍及参数解析
+# 这是页面的图标
+# icon: fab fa-markdown
+# 这是侧边栏的顺序
+order: 1
+# 设置作者
+author: xiaovin
+# 设置写作时间
+date: 2023-04-01
+# 是否原创
+# isOriginal: true
+# 一个页面可以有多个分类
+category:
+  - 数据集成
+# 一个页面可以有多个标签
+# tag:
+#   - Flume
+# 此页面会在文章列表置顶
+sticky: true
+# 此页面会出现在文章收藏中
+star: true
+---
+
 ## 一、Channel介绍
 
 Channel被设计为Event中转临时缓冲区，存储Source收集并且没有被Sink读取的Event，为平衡Source收集和Sink读取数据的速度，可视为Flume内部的消息队列。Channel线程安全并且具有事务性，支持source写失败重复写和sink读失败重复读等操作。
