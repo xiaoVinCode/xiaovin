@@ -23,26 +23,11 @@ jobs:
         with:
           run_install: true
 
-
       - name: 设置 Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: pnpm
-
-#      - name: Build docs
-#        run: pnpm docs:build
-#
-#      - name: Add .nojekyll
-#        run: echo > docs/.vuepress/dist/.nojekyll
-#
-#      - name: Deploy to GitHub Pages
-#        uses: crazy-max/ghaction-github-pages@v2
-#        with:
-#          build_dir: docs/.vuepress/dist
-#          target_branch: gh-pages
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 构建文档
         env:
