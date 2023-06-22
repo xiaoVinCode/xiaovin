@@ -3,16 +3,15 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar/index.js";
 
 export default hopeTheme({
-    hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+    hostname: "https://xiaovin.gitee.io",
 
     iconAssets: "iconfont",
     // iconAssets: "fontawesome-with-brands",
 
     author: {
         name: "xiaovin",
-        url: "https://mrhope.site",
+        url: "https://xiaovin.gitee.io",
     },
-
 
     logo: "/logo.svg",
 
@@ -85,7 +84,7 @@ export default hopeTheme({
             figure: true,
             imgLazyload: true,
             // imgSize: true,
-            include: true,
+            // include: true,
             // mark: true,
             tasklist: true,
             // playground: {
@@ -102,10 +101,10 @@ export default hopeTheme({
             // echarts: true, // 是否启用 ECharts 图表支持。
             // flowchart: true, // 是否启用流程图支持。
         },
-        feed: {
-            atom: true,
-            json: true,
-            rss: true,
-        },
+        // feed: {
+        //     atom: true,
+        //     json: true,
+        //     rss: true,
+        // },
     },
 });
