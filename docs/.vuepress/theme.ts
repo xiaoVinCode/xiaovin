@@ -18,7 +18,7 @@ export default hopeTheme({
     repo: "https://gitee.com/xiaoVin/xiaovin",
     // repo: "vuepress-theme-hope/vuepress-theme-hope",
     docsDir: "docs",
-    docsBranch: "master",
+    docsBranch: "main",
     // 纯净模式：https://theme-hope.vuejs.press/zh/guide/interface/pure.html
     // pure: true,
 
