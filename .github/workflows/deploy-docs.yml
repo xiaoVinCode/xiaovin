@@ -30,30 +30,30 @@ jobs:
           node-version: 18
           cache: pnpm
 
-      - name: Build docs
-        run: pnpm docs:build
-
-      - name: Add .nojekyll
-        run: echo > docs/.vuepress/dist/.nojekyll
-
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          build_dir: docs/.vuepress/dist
-          target_branch: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-#      - name: 构建文档
-#        env:
-#          NODE_OPTIONS: --max_old_space_size=8192
-#        run: |-
-#          pnpm run docs:build
-#          > docs/.vuepress/dist/.nojekyll
+#      - name: Build docs
+#        run: pnpm docs:build
 #
-#      - name: 部署文档
-#        uses: JamesIves/github-pages-deploy-action@v4
+#      - name: Add .nojekyll
+#        run: echo > docs/.vuepress/dist/.nojekyll
+#
+#      - name: Deploy to GitHub Pages
+#        uses: crazy-max/ghaction-github-pages@v2
 #        with:
-#          # 这是文档部署到的分支名称
-#          branch: gh-pages
-#          folder: docs/.vuepress/dist
+#          build_dir: docs/.vuepress/dist
+#          target_branch: gh-pages
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 构建文档
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: |-
+          pnpm run docs:build
+          > docs/.vuepress/dist/.nojekyll
+
+      - name: 部署文档
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 这是文档部署到的分支名称
+          branch: gh-pages
+          folder: docs/.vuepress/dist
