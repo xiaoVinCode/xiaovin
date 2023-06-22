@@ -4,7 +4,7 @@ import {searchPlugin} from "@vuepress/plugin-search";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-    base: "/",
+    base: "/xiaovin/",
 
     lang: "zh-CN",
     title: "文档演示",
